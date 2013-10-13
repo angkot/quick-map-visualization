@@ -52,7 +52,7 @@ var process = {
     map.setView(param);
   },
 
-  addLine: function(param) {
+  drawLine: function(param) {
     var o = L.polyline.apply(L.polyline, param);
     o.addTo(map);
 
@@ -60,7 +60,7 @@ var process = {
     objs[idx] = o;
   },
 
-  addPoint: function(param) {
+  drawPoint: function(param) {
     var o = L.circleMarker.apply(L.circleMarker, param);
     o.addTo(map);
 
@@ -68,7 +68,7 @@ var process = {
     objs[idx] = o;
   },
 
-  addPoints: function(param) {
+  drawPoints: function(param) {
     var points = param[0],
         opts = param[1] || {};
 
